@@ -40,12 +40,20 @@ public class Usuario {
 	  * @param senha -> senha string no formato de texto limmpo
 	  */
 	
+	
+	
 	public Usuario(String login, String senha) {
 		Assert.isTrue(org.springframework.util.StringUtils.hasLength(senha), "A senha não pode ser em branco");
 		Assert.isTrue(org.springframework.util.StringUtils.hasLength(login), "O Login não pode ser em branco");
 		Assert.isTrue(senha.length() >= 6, "A senha precisa ter mais de 6 caracteres");
 		this.login = login;
 		this.senha = new BCryptPasswordEncoder().encode(senha);
+	}
+
+
+	
+	public Usuario() {
+	
 	}
 
 
@@ -76,7 +84,12 @@ public class Usuario {
 	public LocalDateTime getCriacao() {
 		return criacao;
 	}
-	
+
+
+
+
+
+
 	
 
 }

@@ -31,7 +31,7 @@ public class UnicoEmailValidator implements Validator {
 		UsuarioDto request = (UsuarioDto) target;
 		Optional<Usuario> emailCadastrado = usuarioRepository.findByLogin(request.getLogin());
 		if(emailCadastrado.isPresent()) {
-			errors.rejectValue("O login ", null, " Já cadastrada" + request.getLogin());
+			errors.rejectValue("Email Já cadastrado no sistema: " +  request.getLogin(), null);
 		}
 		
 	}

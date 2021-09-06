@@ -1,8 +1,5 @@
 package br.com.chogataoMeli.DataTransferObject;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import br.com.chogataoMeli.model.Usuario;
 
 public class UsuarioDto {

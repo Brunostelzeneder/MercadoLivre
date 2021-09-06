@@ -41,6 +41,9 @@ public class ValidationErrorHandler {
 		return buildValidationErrors(globalErrors, fieldErrors);
 	}
 	
+
+
+	
 	private ValidationErrorsOutputDto buildValidationErrors(List<ObjectError> globalErrors, List<FieldError> fieldErrors) {
 		ValidationErrorsOutputDto validationErrors = new ValidationErrorsOutputDto();
 		globalErrors.forEach(error -> validationErrors.addError(getErrorMessage(error)));
@@ -53,6 +56,9 @@ public class ValidationErrorHandler {
 		
 		return validationErrors;
 	}
+	
+
+
 
 
 	private String getErrorMessage(ObjectError error) {

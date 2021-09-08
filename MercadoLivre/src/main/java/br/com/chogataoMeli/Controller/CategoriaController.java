@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import br.com.chogataoMeli.DataTransferObject.CategoriaDto;
 import br.com.chogataoMeli.model.Categoria;
-import br.com.chogataoMeli.model.CategoriaDto;
 import br.com.chogataoMeli.repository.CategoriaRepository;
 
 @RestController

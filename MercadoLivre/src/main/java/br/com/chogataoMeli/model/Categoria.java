@@ -23,7 +23,6 @@ public class Categoria {
 	private String nome;
 	
 	@ManyToOne
-	@NotBlank(message = "Precisa cadastar uma categoria")
 	private Categoria categoriaMae;
 
 	@Deprecated
@@ -32,16 +31,27 @@ public class Categoria {
 	}
 
 	
-	
-	
 	public Categoria(String nome, Categoria categoriaMae) {
 		this.nome = nome;
 		this.categoriaMae = categoriaMae;
 	}
 
 
+	
+	@Override
+	public String toString() {
+		return "Categoria [id=" + id + ", nome=" + nome + ", categoriaMae=" + categoriaMae + "]";
+	}
 
+	public Categoria(@NotBlank String nome) {
+		this.nome = nome;
+	}
 
+	public void setMae(Categoria categoriaMae) {
+		this.categoriaMae = categoriaMae;
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -57,22 +67,6 @@ public class Categoria {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-
-	@Override
-	public String toString() {
-		return "Categoria [id=" + id + ", nome=" + nome + ", categoriaMae=" + categoriaMae + "]";
-	}
-
-	public Categoria(@NotBlank String nome) {
-		this.nome = nome;
-	}
-
-	public void setMae(Categoria categoriaMae) {
-		this.categoriaMae = categoriaMae;
-		
-	}
-	
 	
 	
 }

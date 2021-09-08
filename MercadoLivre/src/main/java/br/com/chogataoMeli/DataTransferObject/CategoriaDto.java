@@ -1,4 +1,4 @@
-package br.com.chogataoMeli.model;
+package br.com.chogataoMeli.DataTransferObject;
 
 import javax.persistence.EntityManager;
 import javax.validation.constraints.NotBlank;
@@ -6,13 +6,14 @@ import javax.validation.constraints.Positive;
 
 import org.springframework.util.Assert;
 
+import br.com.chogataoMeli.model.Categoria;
+
 public class CategoriaDto {
 
 	@NotBlank
 	private String nome;
 	
 	@Positive
-	@NotBlank(message = "Não deve estar em branco")
 	private Long idCategoriaMae;
 
 
